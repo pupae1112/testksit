@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>การบ้านครั้งที่ 2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+body {
+background-color: #e1f7d5; 
+}
+</style>
+<br><h1 align="center">การบ้านครั้ง ที่ 2</h1>
+
+<tr>
+    <th><CENTER>น.ส.วรมน</th>&nbsp;&nbsp;<th>แก่นอ่อน</th>
+<p id="day"></p>
+
+<script>
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "อาทิตย์";
+    break;
+  case 1:
+    day = "จันทร์";
+    break;
+  case 2:
+    day = "อังคาร";
+    break;
+  case 3:
+    day = "พุธ";
+    break;
+  case 4:
+    day = "พฤหัสบดี";
+    break;
+  case 5:
+    day = "ศุกร์";
+    break;
+  case  6:
+    day = "เสาร์";
+}
+document.getElementById("day").innerHTML = "วันนี้คือวัน " + day;
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+</script>
+<button>คลิก</button>
+
+
+</body>
+</html>
