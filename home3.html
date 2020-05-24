@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>การบ้านครั้งที่ 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="navbar-header">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-dashboard">ระบบงานเครื่องราชอิสริยาภรณ์</a>
+      </span>
+    </li>
+
+ 
+    <ul class="nav navbar-nav">
+      <li><a href="#"><span class="glyphicon glyphicon-home"></span> &nbsp;Home</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-search"></span> &nbsp;Search</a></li>
+  </ul>
+
+ <div class="collapse navbar-collapse" id="myNavbar">
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><span class="glyphicon glyphicon-plus"></span>ยศ</a></li> 
+    <li><a href="#"><span class="glyphicon glyphicon-plus"></span>ชั้นตรา</a></li> 
+    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> 
+  </ul>
+</nav>
+
+
+<div class="container">
+ <form>
+  <div class="w3-container w3-border w3-large">
+    <label>เลขประจำตัว</label>
+    <label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;คำนำหน้า-เพศ-ชื่อ สกุล</label>  
+  <br>
+    <input type="number" id="points" placeholder="เลขบัตรประชาชน" name="points" step="3">
+    <input type="number" id="points" placeholder="เลขทหาร" name="points" step="3">
+    <td><select name="txtRank">
+         <option value=""></option>
+            <option value="พล.อ.">พลเอก</option>
+            <option value="พล.ท.">พลโท</option>
+            <option value="พล.ต.">พลตรี</option>
+            <option value="พ.อ.">พันเอก</option>
+            <option value="พ.ท.">พันโท</option>
+            <option value="พ.ต.">พันตรี</option>
+            <option value="ร.อ.">ร้อยเอก</option>
+            <option value="ร.ท.">ร้อยโท</option>
+            <option value="ร.ต.">ร้อยตรี</option>
+            <option value="จ.ส.อ.">จ่าสิบเอก</option>
+            <option value="จ.ส.ท.">จ่าสิบโท</option>
+            <option value="จ.ส.ต.">จ่าสิบตรี</option>
+            <option value="ส.อ.">สิบเอก</option>
+            <option value="ส.ท.">สิบโท</option>
+            <option value="ส.ต.">สิบตรี</option>
+            <option value="นาย">นาย</option>
+            <option value="นาง">นาง</option>
+            <option value="น.ส.">นางสาว</option>
+        </select>
+    <td><select name="txtSex">
+            <option value="ชาย">ชาย</option>
+            <option value="หญิง">หญิง</option>
+    <input type="text" id="name"placeholder="ชื่อ" name="name">
+    <input type="text" id="lname"placeholder="สกุล" name="lname">
+  <br>
+    <label>ชื่อ-สกุล เดิม - สังกัด</label>
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;<label>หมายเหตุ</label>
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<label>บันทึก</label>
+  <br>
+    <input type="text" id="name"placeholder="ชื่อ-สกุล เดิม" name="name">
+    <input type="text" id="lname"placeholder="สังกัด" name="lname">
+  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<input type="text" id="lname"placeholder="หมายเหตุ" name="lname">
+  <button type="submit" class="btn btn-success" name="save" value="ok"><span class="glyphicon glyphicon-floppy-disk"></span> SAVE</button>
+</select>
+</td>
+  <br><br><br>
+
+<form name="frmSearch" method="get" class="form-inline alert alert-info"><center>
+        <input name="txtKeyword" type="text" id="txtKeyword" value="" size="50" placeholder="ค้นหา เลขบัตรประชาชน /เลขทหาร/ชื่อ/สกุล/ชื่อ-สกุลเดิม"> 
+        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Search</button>
+<br><br>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th width="30"><div align="center">ลำดับ</div></th>
+        <th width="100"><div align="center">เลขบัตรประชาชน</div></th>
+        <th width="100"><div align="center">เลขทหาร</div></th>
+        <th width="100"><div align="center">คำนำหน้าชื่อ</div></th>
+        <th width="100"><div align="center">ชื่อ</div></th>
+        <th width="100"><div align="center">สกุล</div></th>
+        <th width="100"><div align="center">สังกัด</div></th>
+        <th width="100"><div align="center">ชื่อ สกุล เดิม</div></th>
+        <th width="100"><div align="center">หมายเหตุ</div></th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr>
+        <td><div align="center">4227</div></td>
+        <td><div align="center">116030040943</div></td>
+        <td><div align="center">146500034</div></td>
+        <td><div align="center">พ.ต.</div></td>
+        <td>ณรงค์ศักดิ์</td>
+        <td>ไม้คต</td>
+        <td>รร.เสธ</td>
+        <td></td>
+        <td><a href="search"><span class="glyphicon glyphicon-search"></span></a>
+          &nbsp;<a href="pencil"><span class="glyphicon glyphicon-pencil"></span></a>
+          &nbsp;<a href="trash"><span class="glyphicon glyphicon-trash"></span></a>
+          <br><div align="center">ลาออก</div>
+        </td></tr>
+      <tr>
+        <td><div align="center">4226</div></td>
+        <td><div align="center">3349900078120</div></td>
+        <td><div align="center">1287102989</div></td>
+        <td><div align="center">พ.อ.(พ)</div></td>
+        <td>คมกฤกษ์</td>
+        <td>หลักคำ</td>
+        <td>ศพม.</td>
+        <td></td>
+        <td><a href="search"><span class="glyphicon glyphicon-search"></span></a>
+          &nbsp;<a href="pencil"><span class="glyphicon glyphicon-pencil"></span></a>
+          &nbsp;<a href="trash"><span class="glyphicon glyphicon-trash"></span></a>
+        </td></tr>
+      <tr>
+        <td><div align="center">4222</div></td>
+        <td><div align="center">3649900028537</div></td>
+        <td><div align="center">1336300804</div></td>
+        <td><div align="center">พ.อ.(พ)</div></td>
+        <td>สิรภพฐ์</td>
+        <td>คำบุญรัตน์</td>
+        <td>สง.ปรมน.ทบ.</td>
+        <td>ชื่อเดิม"พิชานนท์"</td>
+        <td><a href="search"><span class="glyphicon glyphicon-search"></span></a>
+          &nbsp;<a href="pencil"><span class="glyphicon glyphicon-pencil"></span></a>
+          &nbsp;<a href="trash"><span class="glyphicon glyphicon-trash"></span></a>
+        </td></tr>
+    </tbody>
+  </table>
+</div>
+
+มี 4,134 เรื่อง 414 หน้า : <a href="#">Log รายการแก้ไข</a>
+<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #0000;
+  color: #13d8f1;
+  border: 1px solid #1101;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
+<div align="center"><div class="pagination">
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">หน้าสุดท้าย</a>
+</div>
+<center>
+<h5><kbd>Version 3.0120191219</kbd></h5>
+<h6><kbd>Powered by .....</kbd></h6>
+</center>
+</div>
+
+
+
+
+</form>
+</body>
